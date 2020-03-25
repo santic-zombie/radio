@@ -1,9 +1,19 @@
 body {
-    background-color: rgb(143, 188, 143);
+  background-color: rgb(143, 188, 143);
+}
+
+#song{
+  width: 400px;
+  height: 300px;
+  margin: auto;
+  justify-content : center;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  color: #fff;
 }
 
 .btn {
-	width: 100px;
+  width: 100px;
 	height: 60px;
 	border-radius: 5px;
 	border: #f54e4e;
@@ -14,12 +24,12 @@ body {
 	cursor: pointer;
 	text-align: center;
 	margin: auto;
-	justify-content : center 
+	justify-content : center;
 
 }
 
 .btn:hover {
-	color: #f54e4e;
+  color: #f54e4e;
 	background-color: #fff;
 }
 
@@ -33,14 +43,10 @@ body {
 	display: flex;
 }
 
-
-h1 { 
-    text-align: center
+h1 {
+  text-align: center
 }
 
 DIV {
-    text-align: center
+  text-align: center
 }
-
-
-

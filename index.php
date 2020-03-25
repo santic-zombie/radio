@@ -15,9 +15,11 @@
 </head>
 
 <body>
-	<h1>Just Radio</h1>
 
 	<div id="song">
+
+		<h1>Just Radio</h1>
+
 		now playing:
 
 		<br>
@@ -47,7 +49,7 @@
 
 		<span id="duration"></span>
 		<br>
-				
+
 	</div>
 
 <script language="JavaScript">
