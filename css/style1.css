@@ -1,5 +1,8 @@
 body {
-  background-color: rgb(143, 188, 143);
+  background-color: rgb(62, 50, 64);
+  background-image: url("/pic/bg.png");
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 
 #song{
@@ -7,7 +10,7 @@ body {
   height: 300px;
   margin: auto;
   justify-content : center;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.55);
   border-radius: 10px;
   color: #fff;
 }
