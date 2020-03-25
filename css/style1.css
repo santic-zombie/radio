@@ -1,0 +1,46 @@
+body {
+    background-color: rgb(143, 188, 143);
+}
+
+.btn {
+	width: 100px;
+	height: 60px;
+	border-radius: 5px;
+	border: #f54e4e;
+	background-color: #f54e4e;
+	color: #fff;
+	transition: 0.5s ease all;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	margin: auto;
+	justify-content : center 
+
+}
+
+.btn:hover {
+	color: #f54e4e;
+	background-color: #fff;
+}
+
+.btn-wrap {
+	max-width: 250px;
+	margin: auto;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+
+h1 { 
+    text-align: center
+}
+
+DIV {
+    text-align: center
+}
+
+
+
