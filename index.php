@@ -3,7 +3,7 @@
 
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<link rel="stylesheet" type="text/css" href="/css/style1.css"> 
+	<link rel="stylesheet" type="text/css" href="/css/style1.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 	<title>My Test Radio</title>
 	<script
@@ -11,26 +11,19 @@
 		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 		crossorigin="anonymous">
 	</script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-  <script>
-  $( function() {
-    $( "#slider" ).slider();
-  } );
-  </script>
 
 </head>
 
 <body>
-	<h1>Just Radio</h1> 
-	
+	<h1>Just Radio</h1>
+
 	<div id="song">
 		now playing:
-		
+
 		<br>
-		
+
 		<div id="title">title</div>
-			
+
 		<br>
 
 		<div class="btn-wrap">
@@ -41,22 +34,20 @@
 			<button id="pause" class="btn">
 			<i class="fas fa-pause-circle"></i>
 			Pause
-			</button>	
+			</button>
 		</div>
-		
+
 		<br>
-	
+
 		<div>
 			vol:
-			<br> 
+			<br>
 			<input id="volume" type="range" min="0" max="20" value="5" />
 		</div>
 
 		<span id="duration"></span>
 		<br>
-		
-		<div id="slider"></div>
-		
+				
 	</div>
 
 <script language="JavaScript">
@@ -85,21 +76,21 @@
 	}, false);
 </script>
 
-<script  language="JavaScript">  
-    function show()  
-    {  
-        $.ajax({  
-            url: '/trackname.php',  
-	    cache: false,  
-            success: function(html){  
-                $('#title').html(html);  
-            }  
-        });  
+<script  language="JavaScript">
+    function show()
+    {
+        $.ajax({
+            url: '/trackname.php',
+	    cache: false,
+            success: function(html){
+                $('#title').html(html);
+            }
+        });
     }
-    $(document).ready(function(){  
-        show();  
-        setInterval('show()',5000);  
-    });  
+    $(document).ready(function(){
+        show();
+        setInterval('show()',5000);
+    });
 </script>
 
 </body>
