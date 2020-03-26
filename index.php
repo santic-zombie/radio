@@ -49,6 +49,8 @@
 
 		<span id="duration"></span>
 		<br>
+		<br>
+		<div id="listeners">title</div>
 
 	</div>
 
@@ -92,6 +94,23 @@
     $(document).ready(function(){
         show();
         setInterval('show()',5000);
+    });
+</script>
+
+<script  language="JavaScript">
+    function show1()
+    {
+        $.ajax({
+            url: '/online.php',
+	    cache: false,
+            success: function(html){
+                $('#listeners').html(html);
+            }
+        });
+    }
+    $(document).ready(function(){
+        show1();
+        setInterval('show1()',5000);
     });
 </script>
 
