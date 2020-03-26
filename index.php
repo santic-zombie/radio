@@ -3,8 +3,8 @@
 
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<link rel="stylesheet" type="text/css" href="/css/style1.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/style1.css">
 	<title>My Test Radio</title>
 	<script
 		src="https://code.jquery.com/jquery-3.4.1.js"
