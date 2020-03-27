@@ -43,7 +43,7 @@
 		<div>
 			vol:
 			<br>
-			<input id="volume" type="range" min="0" max="20" value="5" />
+			<input id="volume" type="range" min="0" max="10" value="5" step="0.1" />
 		</div>
 
 		<span id="duration"></span>
@@ -57,20 +57,19 @@
 
 <script language="JavaScript">
 	var audio = new Audio('http://stream.santic-zombie.ru');
+
 	var play = document.getElementById('play');
 	play.addEventListener('click', function() {
 		$("#myPlay").text("Now playing:");
 		audio.play();
 	}, false);
+
 	var pause = document.getElementById('pause');
 	pause.addEventListener('click', function() {
 		 $("#myPlay").text("Paused");
 	     audio.pause();
 	}, false);
-	var volume = document.getElementById('volume');
-	volume.addEventListener('change', function(){
-	    audio.volume = parseFloat(this.value / 10);
-	}, false);
+
 	audio.addEventListener("timeupdate", function() {
 	    var duration = document.getElementById('duration');
 	    var s = parseInt(audio.currentTime % 60);
@@ -81,6 +80,10 @@
 	    if (h < 10) h = '0' + h;
 	    duration.innerHTML = h + ':' + m + ':' + s;
 	}, false);
+
+	$("#volume").mousemove(function(){
+	   audio.volume = parseFloat(this.value / 10);
+	});
 </script>
 
 <script  language="JavaScript">
