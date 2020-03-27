@@ -16,13 +16,12 @@
 
 <body>
 
+<div class="parent">
 	<div id="song">
 
 		<h1>Just Radio</h1>
 
-		now playing:
-
-		<br>
+		<div id="myPlay">-</div>
 
 		<div id="title">title</div>
 
@@ -53,15 +52,19 @@
 		<div id="listeners">title</div>
 
 	</div>
+</div>
+
 
 <script language="JavaScript">
 	var audio = new Audio('http://stream.santic-zombie.ru');
 	var play = document.getElementById('play');
 	play.addEventListener('click', function() {
+		$("#myPlay").text("Now playing:");
 		audio.play();
 	}, false);
 	var pause = document.getElementById('pause');
 	pause.addEventListener('click', function() {
+		 $("#myPlay").text("Paused");
 	     audio.pause();
 	}, false);
 	var volume = document.getElementById('volume');
