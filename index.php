@@ -54,8 +54,8 @@
 	</div>
 </div>
 
-<script src="js/audio.js"></script>
-<script src="js/radio.js"></script>
+<script src="js/audio.js" type="text/javascript"></script>
+<script src="js/radio.js" type="text/javascript"></script>
 
 </body>
 
