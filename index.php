@@ -11,6 +11,21 @@
 		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 		crossorigin="anonymous">
 	</script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jsrender/1.0.6/jsrender.js"
+		integrity="sha256-2Mqub/wO44EnER/JI+RrSncU1C4rU9PKK7BaZIn87jI="
+		crossorigin="anonymous">
+	</script>
+	<script src="js/lastfm.api.md5.js" type="text/javascript"></script>
+	<script src="js/lastfm.api.js" type="text/javascript"></script>
+
+<!--
+	<script id="lastfmTemplateArtistInfo" type="text/x-jsrender">
+		<div class="artist_info">
+  	<a href="{{:url}}" rel="nofollow" target="_blank"><b>{{:name}}:</b><img src="{{:image[1]["#text"]}}" alt="{{:name}}" /></a>
+    </div>
+	</script>
+-->
 
 </head>
 
@@ -51,11 +66,17 @@
 		<br>
 		<div id="listeners">title</div>
 
+		<br>
+
+		<h2>Top artist</h2>
+	  <div class="content-body-inner" id="curr_artist"></div>
+
 	</div>
 </div>
 
 <script src="js/audio.js" type="text/javascript"></script>
 <script src="js/radio.js" type="text/javascript"></script>
+<script src="js/info.js" type="text/javascript"></script>
 
 </body>
 
