@@ -1,11 +1,6 @@
 function show()
 {
 
-  var lastfm = new LastFM({
-    apiKey    : '59ab8307ec00a5ec90574ac91885798e',
-    apiSecret : 'e09bec215fdc3100ff998167e5b401f8',
-  });
-
   let xmlHttpRequest = function() {
     return new Promise(function(resolve, reject) {
       var xhr = new XMLHttpRequest();
@@ -39,16 +34,7 @@ function show()
       if (MPDartist == '') {
         $('#title').html(MPDfile);
         } else {
-          lastfm.artist.getInfo({artist: MPDartist}, {success: function(data){
-            var artistLink = data.artist.url;
-            // формируем ссылку на артиста в LastFM
-            document.querySelector('a[name="lastFMlink"]').setAttribute('href', artistLink);
-            // выводим название артиста и трека ссылкой
-            $('#title').html(MPDartist+' - '+MPDsong);
-            }, error: function(code, message){
-            console.log('Error #'+code+': '+message);}
-          });
-          console.log('WHAT??!')
+          getLastFM_url(MPDartist, MPDsong);
         }
     });
 
@@ -60,3 +46,22 @@ $(document).ready(
     setInterval(show, 5000);
   }
 );
+
+function getLastFM_url(FMartist, FMsong)
+{
+  var lastfm = new LastFM({
+    apiKey    : '59ab8307ec00a5ec90574ac91885798e',
+    apiSecret : 'e09bec215fdc3100ff998167e5b401f8',
+  });
+
+  lastfm.artist.getInfo({artist: FMartist}, {success: function(data){
+    var artistLink = data.artist.url;
+    // формируем ссылку на артиста в LastFM
+    document.querySelector('a[name="lastFMlink"]').setAttribute('href', artistLink);
+    // выводим название артиста и трека ссылкой
+    $('#title').html(FMartist+' - '+FMsong);
+    }, error: function(code, message){
+    console.log('Error #'+code+': '+message);}
+  });
+  console.log('WHAT??!')
+}
