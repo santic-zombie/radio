@@ -26,16 +26,17 @@ function show()
       MPDartist = MPDsong = MPDfile = 'empty';
       var array = temp.toString().split("\n");
       // вывод в консоль информации о файле
+      /*
       for(i in array) {
-        console.log(array[i]);}
+        console.log(array[i]);} */
+
       // .replace - удаление пробелов в начале и конце строки
       MPDartist = array[0].replace(/^\s*/,'').replace(/\s*$/,'');
       MPDsong = array[1];
       MPDfile = array[2].replace(/^vk_kun\//,'').replace(/\.mp3/,'');
-      console.log(MPDfile);
+      //console.log(MPDartist);
 
-      if (MPDartist == null && MPDsong == null) {
-        //document.querySelector('a[name="lastFMlink"]').setAttribute('href', null);
+      if (MPDartist == '') {
         $('#title').html(MPDfile);
         } else {
           lastfm.artist.getInfo({artist: MPDartist}, {success: function(data){
