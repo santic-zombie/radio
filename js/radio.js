@@ -34,21 +34,21 @@ function show()
       MPDfile = array[2].replace(/^vk_kun\//,'').replace(/\.mp3/,'');
       console.log(MPDfile);
 
-      if (MPDartist !== null) {
-        lastfm.artist.getInfo({artist: MPDartist}, {success: function(data){
-          var artistLink = data.artist.url;
-          // формируем ссылку на артиста в LastFM
-          document.querySelector('a[name="lastFMlink"]').setAttribute('href', artistLink);
-          // выводим название артиста и трека ссылкой
-          $('#title').html(MPDartist+' - '+MPDsong);
-        }, error: function(code, message){
-          console.log('Error #'+code+': '+message);
-          MPDartist = null;
-        }});}
-        else {
-            //document.querySelector('a[name="lastFMlink"]').setAttribute('href', null);
-            //$('#title').html(MPDfile);
-            alert('WTF!?');}
+      if (MPDartist == null && MPDsong == null) {
+        //document.querySelector('a[name="lastFMlink"]').setAttribute('href', null);
+        $('#title').html(MPDfile);
+        } else {
+          lastfm.artist.getInfo({artist: MPDartist}, {success: function(data){
+            var artistLink = data.artist.url;
+            // формируем ссылку на артиста в LastFM
+            document.querySelector('a[name="lastFMlink"]').setAttribute('href', artistLink);
+            // выводим название артиста и трека ссылкой
+            $('#title').html(MPDartist+' - '+MPDsong);
+            }, error: function(code, message){
+            console.log('Error #'+code+': '+message);}
+          });
+          console.log('WHAT??!')
+        }
     });
 
 }
