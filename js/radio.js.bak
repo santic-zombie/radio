@@ -1,0 +1,28 @@
+function show()
+{
+ /*
+// php-scrip exec mpc current command
+  $.ajax({
+    url: '../trackname.php',
+    cache: false,
+    success: function(data){
+      $('#title').html(data);
+    }
+  }); */
+
+  $.ajax({
+    url: '../online.php',
+    cache: false,
+    success: function(html){
+      $('#listeners').html(html);
+    }
+  });
+
+}
+
+$(document).ready(
+  () => {
+    show();
+    setInterval(show, 5000);
+  }
+);

@@ -1,8 +1,8 @@
 body {
   background-color: rgb(62, 50, 64);
-  background-image: url("/pic/bg.png");
+  background-image: url("/pic/bg.jpg");
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center center;
   background-size: cover;
 }
 
@@ -14,9 +14,9 @@ body {
     left: 0;
     display: flex;
     align-items: center;
-    align-content: center; 
-    justify-content: center; 
-    overflow: auto;   
+    align-content: center;
+    justify-content: center;
+    overflow: auto;
 }
 
 #song{

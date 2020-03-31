@@ -1,4 +1,6 @@
-var audio = new Audio('http://stream.santic-zombie.ru');
+var stream_url = 'http://stream.santic-zombie.ru';
+
+var audio = new Audio(stream_url);
 
 var play = document.getElementById('play');
 play.addEventListener('click', function() {
@@ -26,3 +28,5 @@ audio.addEventListener("timeupdate", function() {
 $("#volume").mousemove(function(){
   audio.volume = parseFloat(this.value / 10);
   });
+
+//audio.muted = true;
