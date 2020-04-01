@@ -36,7 +36,6 @@ function show()
       MPDartist = array[0];
       MPDsong = array[1];
       MPDfile = array[2].replace(/^vk_kun\//,'').replace(/\.mp3/,'');
-      //console.log(MPDartist);
 
       if (MPDartist == '' && MPDCurr != MPDfile) {
         MPDartist = MPDfile.replace(/\s-.*/,'').replace(/^\s*/,'').replace(/\s*$/,'');

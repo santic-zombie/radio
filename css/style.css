@@ -1,11 +1,5 @@
 body {
   background-color: rgb(62, 50, 64);
-/*
-  background-image: url("/pic/bg.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover; */
 }
 
 .parent {
@@ -20,8 +14,6 @@ body {
     align-content: center;
     justify-content: center;
     overflow: auto;
-
-
 }
 
 #song{
