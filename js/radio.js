@@ -1,3 +1,11 @@
+var lastfm = new LastFM({
+  apiKey    : '59ab8307ec00a5ec90574ac91885798e',
+  apiSecret : 'e09bec215fdc3100ff998167e5b401f8',
+});
+
+var MPDartist, MPDsong, MPDfile, MPDCurr;
+MPDartist = MPDsong = MPDfile = MPDCurr = 'empty';
+
 function show()
 {
 
@@ -17,8 +25,7 @@ function show()
 
   xmlHttpRequest()
     .then(function(temp){
-      var MPDartist, MPDsong, MPDfile;
-      MPDartist = MPDsong = MPDfile = 'empty';
+      // Получение информации из файла
       var array = temp.toString().split("\n");
       // вывод в консоль информации о файле
       /*
@@ -26,18 +33,20 @@ function show()
         console.log(array[i]);} */
 
       // .replace - удаление пробелов в начале и конце строки
-      MPDartist = array[0].replace(/^\s*/,'').replace(/\s*$/,'');
+      MPDartist = array[0];
       MPDsong = array[1];
       MPDfile = array[2].replace(/^vk_kun\//,'').replace(/\.mp3/,'');
       //console.log(MPDartist);
 
-      if (MPDartist == '') {
-        $('#title').html(MPDfile);
-        } else {
+      if (MPDartist == '' && MPDCurr != MPDfile) {
+        MPDartist = MPDfile.replace(/\s-.*/,'').replace(/^\s*/,'').replace(/\s*$/,'');
+        MPDsong = MPDfile.replace(/^.*\s-/,'').replace(/^\s*/,'').replace(/\s*$/,'');
+        getLastFM_url(MPDartist, MPDsong);
+      } else if (MPDCurr != MPDfile) {
           getLastFM_url(MPDartist, MPDsong);
         }
+      MPDCurr = MPDfile;
     });
-
 }
 
 $(document).ready(
@@ -49,19 +58,13 @@ $(document).ready(
 
 function getLastFM_url(FMartist, FMsong)
 {
-  var lastfm = new LastFM({
-    apiKey    : '59ab8307ec00a5ec90574ac91885798e',
-    apiSecret : 'e09bec215fdc3100ff998167e5b401f8',
-  });
-
   lastfm.artist.getInfo({artist: FMartist}, {success: function(data){
-    var artistLink = data.artist.url;
+    console.log(data.artist.url);
     // формируем ссылку на артиста в LastFM
-    document.querySelector('a[name="lastFMlink"]').setAttribute('href', artistLink);
+    document.querySelector('a[name="lastFMlink"]').setAttribute('href', data.artist.url);
     // выводим название артиста и трека ссылкой
     $('#title').html(FMartist+' - '+FMsong);
     }, error: function(code, message){
     console.log('Error #'+code+': '+message);}
   });
-  console.log('WHAT??!')
 }

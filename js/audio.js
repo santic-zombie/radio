@@ -14,6 +14,7 @@ pause.addEventListener('click', function() {
   audio.pause();
   }, false);
 
+/*
 audio.addEventListener("timeupdate", function() {
   var duration = document.getElementById('duration');
   var s = parseInt(audio.currentTime % 60);
@@ -24,6 +25,7 @@ audio.addEventListener("timeupdate", function() {
   if (h < 10) h = '0' + h;
   duration.innerHTML = h + ':' + m + ':' + s;
   }, false);
+*/
 
 $("#volume").mousemove(function(){
   audio.volume = parseFloat(this.value / 10);
