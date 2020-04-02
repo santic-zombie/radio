@@ -16,43 +16,85 @@ body {
     overflow: auto;
 }
 
-#song{
-  width: 400px;
-  height: 340px;
+#RadioBox{
+  width: 410px;
+  height: 350px;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   color: #fff;
 }
 
-.btn {
-  width: 100px;
-	height: 60px;
-	border-radius: 5px;
+.tagBOX{
+  width: 410px;
+  height: 150px;
+}
+
+.tagA {
+  width: 400px;
+	height: 20px;
+	border-radius: 5px 5px 0 0;
 	border: #f54e4e;
-	background-color: #f54e4e;
+	background-color: #000;
 	color: #fff;
 	transition: 0.5s ease all;
 	outline: none;
 	cursor: pointer;
 	text-align: center;
-	margin: auto;
-	justify-content : center;
-
+  margin-left: auto;
+  margin-right: auto
 }
 
-.btn:hover {
-  color: #f54e4e;
+.tagA:hover {
+  color: #000;
 	background-color: #fff;
 }
 
-.btn-wrap {
-	max-width: 250px;
-	margin: auto;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
+.tagB {
+  width: 400px;
+	height: 20px;
+	border-radius: 0;
+	border: #f54e4e;
+	background-color: #fff;
+	color: #000;
+	transition: 0.5s ease all;
+	outline: none;
+	text-align: center;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.tagC {
+  width: 400px;
+	height: 20px;
+	border-radius: 0;
+	border: #f54e4e;
+	background-color: #000;
+	color: #fff;
+	transition: 0.5s ease all;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.tagC:hover {
+  color: #000;
+	background-color: #fff;
+}
+
+.tagD {
+  width: 400px;
+	height: 20px;
+	border-radius: 0 0 5px 5px;
+	border: #f54e4e;
+	background-color: #fff;
+	color: #000;
+	transition: 0.5s ease all;
+	outline: none;
+	text-align: center;
+  margin-left: auto;
+  margin-right: auto
 }
 
 h1::before {
@@ -80,6 +122,37 @@ h1 {
   text-align: center
   float:left;
   margin:10px 50px;
+}
+
+.btn {
+  width: 100px;
+	height: 60px;
+	border-radius: 5px;
+	border: #f54e4e;
+	background-color: #000;
+	color: #fff;
+	transition: 0.5s ease all;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	margin: auto;
+	justify-content : center;
+
+}
+
+.btn:hover {
+  color: #000;
+	background-color: #fff;
+}
+
+.btn-wrap {
+	max-width: 250px;
+	margin: auto;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
 }
 
 DIV {

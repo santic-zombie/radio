@@ -40,9 +40,9 @@ function show()
       if (MPDartist == '' && MPDCurr != MPDfile) {
         MPDartist = MPDfile.replace(/\s-.*/,'').replace(/^\s*/,'').replace(/\s*$/,'');
         MPDsong = MPDfile.replace(/^.*\s-/,'').replace(/^\s*/,'').replace(/\s*$/,'');
-        getLastFM_url(MPDartist, MPDsong);
+        getLastFM_info(MPDartist, MPDsong);
       } else if (MPDCurr != MPDfile) {
-          getLastFM_url(MPDartist, MPDsong);
+          getLastFM_info(MPDartist, MPDsong);
         }
       MPDCurr = MPDfile;
     });
@@ -55,15 +55,26 @@ $(document).ready(
   }
 );
 
-function getLastFM_url(FMartist, FMsong)
+function getLastFM_info(FMartist, FMsong)
 {
   lastfm.artist.getInfo({artist: FMartist}, {success: function(data){
     console.log(data.artist.url);
     // формируем ссылку на артиста в LastFM
-    document.querySelector('a[name="lastFMlink"]').setAttribute('href', data.artist.url);
-    // выводим название артиста и трека ссылкой
-    $('#title').html(FMartist+' - '+FMsong);
+    document.querySelector('form[name="artistURL"]').setAttribute('action', data.artist.url);
+    // выводим название артиста
+    $("#artistName").text(FMartist);
     }, error: function(code, message){
     console.log('Error #'+code+': '+message);}
   });
+
+  lastfm.track.getInfo({track: FMsong, artist: FMartist}, {success: function(data){
+    console.log(data.track.url);
+    // формируем ссылку на артиста в LastFM
+    document.querySelector('form[name="songURL"]').setAttribute('action', data.track.url);
+    // выводим название трека
+    $("#songName").text(FMsong);
+    }, error: function(code, message){
+    console.log('Error #'+code+': '+message);}
+  });
+
 }

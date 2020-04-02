@@ -6,13 +6,13 @@ audio.volume = 0.01;
 
 var play = document.getElementById('play');
 play.addEventListener('click', function() {
-  $("#myPlay").text("Now playing:");
+  $("#PlayStat").text("Now playing");
   audio.play();
   }, false);
 
 var pause = document.getElementById('pause');
 pause.addEventListener('click', function() {
-  $("#myPlay").text("Paused");
+  $("#PlayStat").text("Paused");
   audio.pause();
   }, false);
 
