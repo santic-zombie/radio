@@ -23,7 +23,6 @@ function show()
       // Получение информации из файла
       var array = temp.toString().split("\n");
 
-      // .replace - удаление пробелов в начале и конце строки
       MPDartist = array[0];
       MPDsong   = array[1];
       MPDfile   = array[2].replace(/^vk_kun\//,'').replace(/\.mp3/,'');

@@ -133,8 +133,17 @@ h1 {
 	cursor: pointer;
 	text-align: center;
 	margin: auto;
-	justify-content : center;
 }
+/*
+.muteEl {
+	margin: auto;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+*/
 
 DIV {
   text-align: center
