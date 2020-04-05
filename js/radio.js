@@ -32,10 +32,11 @@ function show()
         MPDartist = MPDfile.replace(/\s-.*/,'').replace(/^\s*/,'').replace(/\s*$/,'');
         MPDsong = MPDfile.replace(/^.*\s-/,'').replace(/^\s*/,'').replace(/\s*$/,'');
         getArtistURL(MPDartist);
-        getSongURL(MPDartist, MPDsong);
+        $("#trackname span").text(MPDartist+" - "+MPDsong);
       } else if (MPDCurr != MPDfile) {
           getArtistURL(MPDartist);
-          getSongURL(MPDartist, MPDsong);
+          $("#trackname span").text(MPDartist+" - "+MPDsong);
+
         }
       MPDCurr = MPDfile;
     });

@@ -5,6 +5,7 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/msgbox.css">
 	<title>My Test Radio</title>
 	<script
 		src="https://code.jquery.com/jquery-3.4.1.js"
@@ -29,20 +30,12 @@
 		<div class="tagWindow">
 			<form name="artistURL" action="" target="_blank">
 				<button class="tagA">
-					Artist
+					Track
 				</button>
 			</form>
-			<div id="artistName" class="tagB">
-				ArtistName
-			</div>
-			<form name="songURL" action="" target="_blank">
-				<button class="tagC">
-					Song
-				</button>
-			</form>
-			<div id="songName" class="tagD marquee">
+			<div id="trackname" class="tagB marquee">
 				<span>
-					SongName
+					Trackname
 				</span>
 			</div>
 		</div>
@@ -51,12 +44,16 @@
 
 		<div class="btn-wrap">
 			<button id="play" class="btn">
-			<i class="fas fa-play-circle"></i>
-			Play
+				<i class="fas fa-play-circle"></i>
+				Play
 			</button>
 			<button id="pause" class="btn">
-			<i class="fas fa-pause-circle"></i>
-			Pause
+				<i class="fas fa-pause-circle"></i>
+				Pause
+			</button>
+			<button id="buff" class="btn">
+				<i class="fas fa-clone"></i>
+				Copy
 			</button>
 		</div>
 
@@ -67,6 +64,8 @@
 			<br>
 			<input id="volume" type="range" min="0" max="10" value="2" step="0.1" />
 		</div>
+
+		<div id="jGrowl"></div>
 
 	</div>
 </div>

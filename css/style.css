@@ -52,40 +52,6 @@ body {
 
 .tagB {
   width: 100%;
-	height: 20px;
-	border-radius: 0;
-	border: #f54e4e;
-	background-color: #fff;
-	color: #000;
-	transition: 0.5s ease all;
-	outline: none;
-	text-align: center;
-  margin-left: auto;
-  margin-right: auto
-}
-
-.tagC {
-  width: 100%;
-	height: 20px;
-	border-radius: 0;
-	border: #f54e4e;
-	background-color: #000;
-	color: #fff;
-	transition: 0.5s ease all;
-	outline: none;
-	cursor: pointer;
-	text-align: center;
-  margin-left: auto;
-  margin-right: auto
-}
-
-.tagC:hover {
-  color: #000;
-	background-color: #fff;
-}
-
-.tagD {
-  width: 100%;
 	//height: 20px;
 	border-radius: 0 0 5px 5px;
 	border: #f54e4e;
@@ -147,7 +113,7 @@ h1 {
 }
 
 .btn-wrap {
-	max-width: 250px;
+	//max-width: 250px;
 	margin: auto;
 	display: -webkit-flex;
 	display: -moz-flex;
