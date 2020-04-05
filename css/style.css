@@ -3,17 +3,17 @@ body {
 }
 
 .parent {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    background: url(/pic/bg.jpg) no-repeat center center / cover;
-    left: 0;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    overflow: auto;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background: url(/pic/bg.jpg) no-repeat center center / cover;
+  left: 0;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  overflow: auto;
 }
 
 #RadioBox{
@@ -113,7 +113,6 @@ h1 {
 }
 
 .btn-wrap {
-	//max-width: 250px;
 	margin: auto;
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -122,52 +121,21 @@ h1 {
 	display: flex;
 }
 
+.mute_btn {
+  width: 30px;
+	height: 30px;
+	border-radius: 5px;
+	border: #f54e4e;
+	background-color: #000;
+	color: #fff;
+	transition: 0.5s ease all;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	margin: auto;
+	justify-content : center;
+}
+
 DIV {
   text-align: center
-}
-
-@-webkit-keyframes scroll {
-    0% {
-        -webkit-transform: translate(0, 0);
-        transform: translate(0, 0);
-    }
-    100% {
-        -webkit-transform: translate(-100%, 0);
-        transform: translate(-100%, 0)
-    }
-}
-
-@-moz-keyframes scroll {
-    0% {
-        -moz-transform: translate(0, 0);
-        transform: translate(0, 0);
-    }
-    100% {
-        -moz-transform: translate(-100%, 0);
-        transform: translate(-100%, 0)
-    }
-}
-
-@keyframes scroll {
-    0% {
-        transform: translate(0, 0);
-    }
-    100% {
-        transform: translate(-100%, 0)
-    }
-}
-
-.marquee {
-  display: block;
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.marquee span {
-  display: inline-block;
-  padding-left: 100%;
-  -webkit-animation: scroll 15s infinite linear;
-  -moz-animation: scroll 15s infinite linear;
-  animation: scroll 15s infinite linear;
 }

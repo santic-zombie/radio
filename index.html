@@ -6,6 +6,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/css/msgbox.css">
+	<link rel="stylesheet" type="text/css" href="/css/scroll_text.css">
+	<link rel="stylesheet" type="text/css" href="/css/volume.css">
 	<title>My Test Radio</title>
 	<script
 		src="https://code.jquery.com/jquery-3.4.1.js"
@@ -60,9 +62,10 @@
 		<br>
 
 		<div>
-			vol:
-			<br>
-			<input id="volume" type="range" min="0" max="10" value="2" step="0.1" />
+			<button id="mute" class="mute_btn">
+				<i class="fas fa-volume-up"></i>
+			</button>
+			<input id="volume" type="range" class="slider" min="0" max="10" value="1" step="0.1" />
 		</div>
 
 		<div id="jGrowl"></div>

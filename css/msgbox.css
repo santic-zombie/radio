@@ -2,7 +2,8 @@
     position: fixed;
     padding: 10px;
     margin: 0px;
-    width: 299px;
+    width: auto;
+    height: auto;
     top: 20px;
     right: 20px;
     text-align: center;
