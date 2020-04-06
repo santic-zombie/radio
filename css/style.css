@@ -132,18 +132,16 @@ h1 {
 	outline: none;
 	cursor: pointer;
 	text-align: center;
-	margin: auto;
+  margin-right: 10px;
+	//margin: auto;
 }
-/*
-.muteEl {
-	margin: auto;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
+
+.volume-wrap {
+  align-items: center;
+  justify-content: center;
 	display: flex;
 }
-*/
+
 
 DIV {
   text-align: center
