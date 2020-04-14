@@ -74,7 +74,7 @@ function getYouTubeRequest(MPDfile) {
     var params = {
         // part: 'id',
         part: 'snippet',
-        key: 'AIzaSyCqebfGlbbqoM0oEbbBsK87IZhlS3_Urcg',
+        key: '',
         q: MPDfile
     };
 
