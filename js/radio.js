@@ -72,12 +72,11 @@ function getSongURL(MPDartist, MPDsong)
 function getYouTubeRequest(MPDfile) {
     var url = 'https://www.googleapis.com/youtube/v3/search';
     var params = {
-        // part: 'id',
+        part: 'id',
         part: 'snippet',
-        key: '',
+        key: 'AIzaSyCfkMY2Nk3QwEh1Tjdqm-8GueBqOS5jgeI',
         q: MPDfile
     };
-
     $.getJSON(url, params, showResults);
 }
 
@@ -87,4 +86,5 @@ function showResults(results) {
   YouURL = entries[0].id.videoId;
   document.querySelector('img[name="YouTubeThumb"]').setAttribute('src', thumb);
   document.querySelector('a[name="YouTubeURL"]').setAttribute('href', "https://www.youtube.com/watch?v="+YouURL);
+  console.log("https://www.youtube.com/watch?v="+YouURL);
 }
