@@ -24,7 +24,7 @@ $("#volume").mousemove(function(){
 
 var copyClipBoard = document.getElementById('buff');
 copyClipBoard.addEventListener('click', function () {
-  var   MsgText    = $('<div id="message-success"><p>Trackname copied to clipboard</p></div>');
+  var   MsgText    = $('<div id="message-success"><p>Track name copied to clipboard</p></div>');
   PopUpMsg(MsgText);
   //нашли наш контейнер
   var ta = document.getElementById('trackname');
@@ -49,11 +49,11 @@ copyClipBoard.addEventListener('click', function () {
       .toggleClass('fas fa-volume-up')
       .toggleClass('fas fa-volume-mute');
       if (audio.muted === false) {
-        var   MsgText    = $('<div id="message-success"><p>Mute Sound</p></div>');
+        var   MsgText    = $('<div id="message-success"><p>Mute sound</p></div>');
         PopUpMsg(MsgText);
         audio.muted = true;
       } else {
-        var   MsgText    = $('<div id="message-success"><p>unmute Sound</p></div>');
+        var   MsgText    = $('<div id="message-success"><p>Unmute sound</p></div>');
         PopUpMsg(MsgText);
         audio.muted = false;
       }

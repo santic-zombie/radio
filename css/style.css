@@ -12,15 +12,15 @@ body {
   display: flex;
   align-items: center;
   align-content: center;
-  justify-content: center;
+  justify-content: left;
   overflow: auto;
 }
 
 #RadioBox{
   width: 450px;
-  height: 490px;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 10px;
+  height: 100%;
+  background-color: rgba(60, 60, 60, 0.9);
+  /* border-radius: 10px; */
   padding: 0 5px;
   color: #fff;
 }
@@ -52,7 +52,7 @@ body {
 
 .tagB {
   width: 100%;
-	//height: 20px;
+	/* height: 20px; */
 	border-radius: 0 0 5px 5px;
 	border: #f54e4e;
 	background-color: #fff;
@@ -136,12 +136,56 @@ h1 {
 	//margin: auto;
 }
 
+.mute_btn:hover {
+  color: #000;
+	background-color: #fff;
+}
+
 .volume-wrap {
   align-items: center;
   justify-content: center;
 	display: flex;
 }
 
+.tcon {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  border: #f54e4e;
+  background-color: #000;
+  color: #fff;
+  transition: 0.5s ease all;
+  outline: none;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tlist {
+  width: 100%;
+  height: 35%;
+  border-radius: 0 0 5px 5px;
+  border: #f54e4e;
+  background-color: #fff;
+  color: #000;
+  transition: 0.5s ease all;
+  outline: none;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+}
+
+.list_el {
+  border-bottom: 2px double #000;
+  background-color: #d3d3d3;
+  color: #000;
+}
+
+.list_el:nth-child(odd) {
+  border-bottom: 2px double #000;
+  background-color: #fff;
+  color: #000;
+}
 
 DIV {
   text-align: center

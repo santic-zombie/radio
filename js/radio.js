@@ -33,10 +33,12 @@ function show()
         getArtistURL(MPDartist);
         $("#trackname span").text(MPDartist+" - "+MPDsong);
         getYouTubeRequest(MPDfile);
+        addText(MPDfile);
       } else if (MPDCurr != MPDfile) {
           getArtistURL(MPDartist);
           $("#trackname span").text(MPDartist+" - "+MPDsong);
           getYouTubeRequest(MPDfile);
+          addText(MPDfile);
         }
       MPDCurr = MPDfile;
     });
@@ -87,4 +89,11 @@ function showResults(results) {
   document.querySelector('img[name="YouTubeThumb"]').setAttribute('src', thumb);
   document.querySelector('a[name="YouTubeURL"]').setAttribute('href', "https://www.youtube.com/watch?v="+YouURL);
   console.log("https://www.youtube.com/watch?v="+YouURL);
+}
+
+function addText(MPDfile) {
+  let last_track = document.createElement('div');
+  last_track.className = "list_el";
+  last_track.innerHTML = MPDfile;
+  track_list.prepend(last_track);
 }
