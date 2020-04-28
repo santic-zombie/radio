@@ -3,36 +3,42 @@ body {
 }
 
 .parent {
-  width: 100%;
+  width:  100%;
   height: 100%;
   position: fixed;
   top: 0;
   background: url(/pic/bg.jpg) no-repeat center center / cover;
   left: 0;
   display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: left;
-  overflow: auto;
+  flex-direction: row;
 }
 
-#RadioBox{
-  width: 450px;
+#RadioBox {
+  width:  25%;
   height: 100%;
   background-color: rgba(60, 60, 60, 0.9);
-  /* border-radius: 10px; */
   padding: 0 5px;
   color: #fff;
 }
 
-.tagBOX{
-  width: 410px;
-  height: 150px;
+#spec {
+  width:  75%;
+  height: 100%;
+}
+
+.canvas {
+  width:  100%;
+  height: 100%;
+}
+
+.youtubeIMG {
+  max-width:60%;
+  height:auto;
 }
 
 .tagA {
   width: 100%;
-	height: 20px;
+	/* height: 20px; */
 	border-radius: 5px 5px 0 0;
 	border: #f54e4e;
 	background-color: #000;
@@ -42,7 +48,8 @@ body {
 	cursor: pointer;
 	text-align: center;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
+  font-size: 1vw;
 }
 
 .tagA:hover {
@@ -67,20 +74,20 @@ body {
 h1::before {
   content: '';
   display: inline-block;
-  margin:0 10px;
-  width: 25px;
-  height: 25px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  border-radius: 25px;
+  margin: 0 10px;
+  width:  0.8em;
+  height: 0.8em;
+  -webkit-border-radius: 0.8em;
+  -moz-border-radius: 0.8em;
+  border-radius: 0.8em;
   background: red;
   animation: blink 3s linear infinite;
 }
 
-@keyframes blink{
-  0%{opacity: 0;}
+@keyframes blink {
+  0%{opacity:   0;}
   25%{opacity: .5;}
-  50%{opacity: 1;}
+  50%{opacity:  1;}
   75%{opacity: .5;}
   100%{opacity: 0;}
 }
@@ -88,13 +95,14 @@ h1::before {
 h1 {
   text-align: center
   float:left;
-  margin:10px 50px;
+  /* margin:10px 50px; */
+  font-size: 2vw;
 }
 
 .btn {
-  width: 100px;
-	height: 60px;
-	border-radius: 5px;
+  width: 7em;
+  height: 4.5em;
+	border-radius: 0.4em;
 	border: #f54e4e;
 	background-color: #000;
 	color: #fff;
@@ -103,7 +111,7 @@ h1 {
 	cursor: pointer;
 	text-align: center;
 	margin: auto;
-	justify-content : center;
+	font-size: 0.8vw;
 
 }
 
@@ -122,18 +130,18 @@ h1 {
 }
 
 .mute_btn {
-  width: 30px;
-	height: 30px;
-	border-radius: 5px;
-	border: #f54e4e;
-	background-color: #000;
-	color: #fff;
-	transition: 0.5s ease all;
-	outline: none;
-	cursor: pointer;
-	text-align: center;
-  margin-right: 10px;
-	//margin: auto;
+  width: 2em;
+  height: 2em;
+  border-radius: 0.4em;
+  border: #f54e4e;
+  background-color: #000;
+  color: #fff;
+  transition: 0.5s ease all;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  margin-right: 0.7em;
+  font-size: 0.8vw;
 }
 
 .mute_btn:hover {
@@ -162,7 +170,7 @@ h1 {
 
 .tlist {
   width: 100%;
-  height: 35%;
+  height: 33%;
   border-radius: 0 0 5px 5px;
   border: #f54e4e;
   background-color: #fff;
@@ -187,6 +195,16 @@ h1 {
   color: #000;
 }
 
+.soc_links {
+	margin: auto;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: inline-flex;
+}
+
 DIV {
-  text-align: center
+  text-align: center;
+  font-size: 1vw;
 }

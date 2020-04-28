@@ -2,6 +2,7 @@ var stream_url = 'http://stream.santic-zombie.ru';
 var audio      = new Audio(stream_url);
 audio.volume   = 0.05;
 
+
 var play = document.getElementById('play');
 play.addEventListener('click', function() {
   var   MsgText    = $('<div id="message-success"><p>Play</p></div>');

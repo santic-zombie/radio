@@ -79,18 +79,39 @@ function getYouTubeRequest(MPDfile) {
         key: 'AIzaSyCfkMY2Nk3QwEh1Tjdqm-8GueBqOS5jgeI',
         q: MPDfile
     };
-    $.getJSON(url, params, showResults);
+    // $.getJSON(url, params, showResults);
+    $.getJSON(url, params, function() {
+      console.log( "success" );
+      })
+      .done(function(results) {
+        // showResults;
+        console.log( "second success" );
+        var entries = results.items;
+        thumb = entries[0].snippet.thumbnails.medium.url;
+        YouURL = entries[0].id.videoId;
+        document.querySelector('img[name="YouTubeThumb"]').setAttribute('src', thumb);
+        document.querySelector('a[name="YouTubeURL"]').setAttribute('href', "https://www.youtube.com/watch?v="+YouURL);
+        console.log("https://www.youtube.com/watch?v="+YouURL);
+      })
+      .fail(function() {
+        console.log( "error" );
+        document.querySelector('img[name="YouTubeThumb"]').setAttribute('src', '/pic/error.jpg');
+        document.querySelector('a[name="YouTubeURL"]').setAttribute('href', "https://www.youtube.com/watch?v=empty");
+      });
+
 }
 
-function showResults(results) {
-  var entries = results.items;
-  thumb = entries[0].snippet.thumbnails.medium.url;
-  YouURL = entries[0].id.videoId;
-  document.querySelector('img[name="YouTubeThumb"]').setAttribute('src', thumb);
-  document.querySelector('a[name="YouTubeURL"]').setAttribute('href', "https://www.youtube.com/watch?v="+YouURL);
-  console.log("https://www.youtube.com/watch?v="+YouURL);
-}
+// Процедура для формирования ссылки и картинки на Youtube
+// function showResults(results) {
+//   var entries = results.items;
+//   thumb = entries[0].snippet.thumbnails.medium.url;
+//   YouURL = entries[0].id.videoId;
+//   document.querySelector('img[name="YouTubeThumb"]').setAttribute('src', thumb);
+//   document.querySelector('a[name="YouTubeURL"]').setAttribute('href', "https://www.youtube.com/watch?v="+YouURL);
+//   console.log("https://www.youtube.com/watch?v="+YouURL);
+// }
 
+// Процедура формирования списка проигрынных треков
 function addText(MPDfile) {
   let last_track = document.createElement('div');
   last_track.className = "list_el";

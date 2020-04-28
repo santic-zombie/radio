@@ -3,18 +3,23 @@
 
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta property="og:title" content="Just Radio" />
+	<meta property="og:site_name" content="My Radio" />
+	<meta property="og:url" content="http://radio.santic-zombie.ru/" />
+	<meta property="og:description" content="My Simple Radio, enjoy!" />
+	<meta property="og:image" content="/pic/kek.jpg" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/css/msgbox.css">
 	<link rel="stylesheet" type="text/css" href="/css/scroll_text.css">
 	<link rel="stylesheet" type="text/css" href="/css/volume.css">
+	<link rel="stylesheet" type="text/css" href="/css/soc_link.css">
 	<title>My Test Radio</title>
 	<script
 		src="https://code.jquery.com/jquery-3.4.1.js"
 		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 		crossorigin="anonymous">
 	</script>
-
 </head>
 
 <body>
@@ -25,16 +30,18 @@
 		<h1>Just Radio</h1>
 
 		<div id="PlayStat">Stopped</div>
+
 		<br>
 
 		<a name="YouTubeURL" href="" target="_blank">
-			<img name="YouTubeThumb" width="336" height="188"
+			<img class="youtubeIMG" name="YouTubeThumb" width="336" height="188"
 				src="">
 			</img>
 		</a>
 
 		<br>
 		<br>
+		
 		<div class="tagWindow">
 			<form name="artistURL" action="" target="_blank">
 				<button class="tagA">
@@ -82,13 +89,32 @@
 		<div id="track_list" class=tlist>
 		</div>
 
+		<br>
+
+		<div class=soc_links>
+			<div class="social telegram">
+    		<a href="https://t.me/santicsRadio" target="_blank"><i class="fa fa-paper-plane fa-2x"></i></a>
+			</div>
+			<div class="social lastfm">
+    		<a href="https://www.last.fm/ru/user/just-radio" target="_blank"><i class="fa fa-lastfm-square fa-2x" aria-hidden="true"></i></a>
+			</div>
+		</div>
+
 		<div id="jGrowl"></div>
 
 	</div>
+
+	<div id=spec>
+		<canvas id="canvas" class=canvas></canvas>
+	</div>
+
 </div>
+
+
 
 <script src="js/audio.js" type="text/javascript"></script>
 <script src="js/radio.js" type="text/javascript"></script>
+<script src="js/visual.js" type="text/javascript"></script>
 
 </body>
 
